@@ -1,0 +1,41 @@
+import java.io.FileOutputStream;
+import java.io.FileReader;
+import java.io.IOException;
+import java.nio.file.FileSystems;
+import java.nio.file.Files;
+import java.nio.file.Path;
+
+public class comms {
+
+	public static void write_ctext(byte[] encrypted, String filename) throws IOException {
+		try (FileOutputStream fos = new FileOutputStream(filename)) {
+			   fos.write(encrypted);
+		}
+	}
+	
+	public static byte[] read_ctext(String filename) throws IOException {
+		byte[] data;
+		Path path=FileSystems.getDefault().getPath(filename);
+		data = Files.readAllBytes(path);
+			return data;
+	}
+	
+	public static void write(byte[] encrypted, String filename) throws IOException {
+		try (FileOutputStream fos = new FileOutputStream(filename,true)) {
+			fos.write(encrypted);
+			fos.close();
+		}
+	}
+	
+	public static String read_text(String filename,int offset,int cutoff) throws IOException {//returns m or sig
+		try (FileReader fr = new FileReader(filename)){//depending of offset
+			char[] temp = new char[1024];
+			fr.skip(offset);
+			fr.read(temp,0,cutoff);
+			fr.close();
+			//System.out.println("temp "+temp.toString());
+			return new String(temp);
+		}
+	}
+	
+}
