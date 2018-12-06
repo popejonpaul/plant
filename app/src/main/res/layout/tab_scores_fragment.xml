@@ -212,12 +212,21 @@
         android:id="@+id/temptv"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:text="@string/temper"
+        android:text="temper"
         android:textSize="36sp"
         app:layout_constraintBottom_toTopOf="@+id/guidelineH65"
         app:layout_constraintLeft_toRightOf="@+id/guidelineV4"
         app:layout_constraintRight_toLeftOf="@+id/guidelineV50"
         app:layout_constraintTop_toBottomOf="@id/guidelineH50" />
+
+<!--    <ListView
+        android:id="@+id/list_view_scores"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineH79"
+        app:layout_constraintLeft_toRightOf="@+id/guidelineV1"
+        app:layout_constraintRight_toLeftOf="@+id/guidelineV99"
+        app:layout_constraintTop_toBottomOf="@id/guidelineH11" />-->
 
     <TextView
         android:id="@+id/watertv"

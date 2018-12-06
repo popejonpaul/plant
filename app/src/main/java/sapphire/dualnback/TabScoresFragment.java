@@ -60,9 +60,9 @@ public class TabScoresFragment extends Fragment {
 		};
 		resetButton.setOnClickListener(ocl);
 
-		ListView listView = view.findViewById(R.id.list_view_scores);
-		scoreAdapt = new ScoreListAdapter(getContext(), sList);
-		listView.setAdapter(scoreAdapt);
+	//	ListView listView = view.findViewById(R.id.list_view_scores);
+	//	scoreAdapt = new ScoreListAdapter(getContext(), sList);
+	//	listView.setAdapter(scoreAdapt);
 		return view;
 	}
 	public void tableData() {
